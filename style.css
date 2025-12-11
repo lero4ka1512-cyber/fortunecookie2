@@ -1,0 +1,94 @@
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    background: url('pattern.png') no-repeat center center fixed;
+    background-size: cover;
+    filter: brightness(0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    font-family: 'The Baster', cursive;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 50px;
+}
+
+.cookie-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.cookie {
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.5s;
+    z-index: 3; /* выше половинок печеньки до разлома */
+}
+
+.cookie-half {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 2;
+    transition: transform 1s ease, opacity 0.5s ease;
+}
+
+.cookie-half.left {
+    left: 0;
+    transform-origin: right center;
+}
+
+.cookie-half.right {
+    right: 0;
+    transform-origin: left center;
+}
+
+.ribbon {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 250px; /* крупнее */
+    transition: transform 1s ease;
+    z-index: 1; /* под текстом */
+}
+
+.prediction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(0);
+    color: #222;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 90%;
+    text-align: center;
+    opacity: 1;
+    z-index: 2; /* поверх всех слоев */
+    transition: transform 0.8s ease;
+    pointer-events: none;
+}
+
+.subtitle {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #222;
+    text-shadow: 1px 1px 2px #fff;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookie Prediction</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=The+Baster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Заголовок -->
+        <h1 class="title">fortune cookie prediction for you</h1>
+
+        <!-- Контейнер с печенькой -->
+        <div class="cookie-container">
+            <!-- Цельная печенька -->
+            <img src="cookie.png" alt="Cookie" class="cookie" id="cookie">
+
+            <!-- Половинки печеньки -->
+            <img src="cookie_left.png" alt="Left Half" class="cookie-half left" id="cookieLeft">
+            <img src="cookie_right.png" alt="Right Half" class="cookie-half right" id="cookieRight">
+
+            <!-- Ленточка для предсказания -->
+            <img src="ribbon.png" alt="Prediction Ribbon" class="ribbon" id="ribbon">
+
+            <!-- Текст предсказания -->
+            <div class="prediction" id="prediction"></div>
+        </div>
+
+        <!-- Подпись под печенькой -->
+        <p class="subtitle">Каждое предсказание — маленькая радость для тебя</p>
+
+        <!-- Звук треска печеньки -->
+        <audio id="crackSound" src="crack.mp3"></audio>
+    </div>
+
+    <!-- Скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
